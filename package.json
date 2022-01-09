@@ -6,7 +6,7 @@
   "repository": "https://github.com/felixschabe/ikea-moebel-namen.git",
   "author": "hello@felixschabe.com <hello@felixschabe.com>",
   "scripts": {
-    "index": "ts-node src/index.ts"
+    "indexing": "ts-node src/index.ts"
   },
   "license": "MIT",
   "private": null,
