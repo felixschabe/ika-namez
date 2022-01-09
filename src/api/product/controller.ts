@@ -22,7 +22,7 @@ export class ProductController {
       return createDefaultApiResponse(res, true, "nothing found", 404);
     }
 
-    const random: number = await getRandom(productsJson.length);
+    const random: number = await getRandom(productsJson.length - 1);
     console.log(random);
 
     res.json(productsJson[random]).status(200);
