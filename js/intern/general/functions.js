@@ -1,6 +1,6 @@
 var contactDepartment = "support";
 var contactSpacer = "@";
-var contactDomain = "felixens.eu";
+var contactDomain = "ika-namez.com";
 
 /* function to simplify math random number */
 function randomInt(min, max) {
