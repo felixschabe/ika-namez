@@ -47,7 +47,12 @@ async function indexNames(): Promise<IkeaProduct[]> {
       .then((response: any) => response.json())
       .then((data: any) => {
         const items = data.searchResultPage.products.main.items;
-        for (let element of items) {
+        for (
+          let currentItemNumber = 0;
+          currentItemNumber < items.length;
+          currentItemNumber++
+        ) {
+          let element = items[currentItemNumber];
           const product: any | null = element.product || null;
           if (product) {
             const id = product.id || "";
@@ -61,6 +66,7 @@ async function indexNames(): Promise<IkeaProduct[]> {
             ikeaProducts.push(
               new IkeaProduct(
                 id,
+                currentItemNumber,
                 priceNumeral,
                 name,
                 typeName,
@@ -79,6 +85,7 @@ async function indexNames(): Promise<IkeaProduct[]> {
 
 class IkeaProduct {
   public id: string;
+  public localId: number;
   public priceNumeral: number;
   public name: string;
   public typeName: number;
@@ -88,6 +95,7 @@ class IkeaProduct {
 
   constructor(
     id: string,
+    localId: number,
     priceNumeral: number,
     name: string,
     typeName: number,
@@ -96,6 +104,7 @@ class IkeaProduct {
     mainImageAlt: string
   ) {
     this.id = id;
+    this.localId = localId;
     this.priceNumeral = priceNumeral;
     this.name = name;
     this.typeName = typeName;
