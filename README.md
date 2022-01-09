@@ -10,7 +10,7 @@ Branches:
 |api       |getting ikea names  |
 |indexing  |indexing them       |
 |ui        |userinterface       |
-|main      |stuf                |
+|main      |stuff               |
 
 # INFO
 
