@@ -1,3 +1,5 @@
 .idea
 output/ikeaProducts.json
 node_modules
+.env
+build
