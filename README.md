@@ -1,15 +1,16 @@
-# IKEA-NAMES
+# IKA-NAMEz
 ***
 This helps you!  
-Basically it lists some names of ikea products.
+Basically it lists these funny names of ikea products.
 
 Branches:
 
 |Branch    |Description         |
 |----------|--------------------|
 |api       |getting ikea names  |
-|indexing  |indexing process    |
+|indexing  |indexing them       |
 |ui        |userinterface       |
+|main      |stuf                |
 
 # INFO
 
