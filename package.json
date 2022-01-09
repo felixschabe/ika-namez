@@ -1,22 +1,28 @@
 {
-  "name": "ikea-moebel-namen",
+  "name": "ikea-names",
   "version": "1.0.0",
-  "description": "getting moebel names",
-  "main": "src/index.ts",
-  "repository": "https://github.com/felixschabe/ikea-moebel-namen.git",
+  "main": "index.js",
+  "repository": "https://github.com/felixschabe/ikea-names.git",
   "author": "hello@felixschabe.com <hello@felixschabe.com>",
-  "scripts": {
-    "indexing": "ts-node src/index.ts"
-  },
   "license": "MIT",
   "private": null,
-  "dependencies": {
-    "node-fetch": "2.6.6"
+  "scripts": {
+    "dev": "nodemon ./src/index.ts"
   },
   "devDependencies": {
-    "@types/node-fetch": "2.5.12",
-    "gts": "^3.1.0",
+    "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "decko": "^1.2.0",
+    "express": "^4.17.2",
+    "express-joi-validation": "^5.0.1",
+    "express-rate-limit": "^6.0.4",
+    "gts": "^3.1.0",
+    "helmet": "^5.0.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "2.6.6"
   }
 }
