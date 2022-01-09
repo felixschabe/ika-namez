@@ -51,9 +51,19 @@ async function indexNames(): Promise<IkeaProduct[]> {
             const name = product.name || "";
             const typeName = product.typeName || "";
             const pipUrl = product.pipUrl || "";
+            const mainImageUrl = product.mainImageUrl || "";
+            const mainImageAlt = product.mainImageAlt || "";
 
             ikeaProducts.push(
-              new IkeaProduct(id, priceNumeral, name, typeName, pipUrl)
+              new IkeaProduct(
+                id,
+                priceNumeral,
+                name,
+                typeName,
+                pipUrl,
+                mainImageUrl,
+                mainImageAlt
+              )
             );
           }
         }
@@ -69,18 +79,24 @@ class IkeaProduct {
   public name: string;
   public typeName: number;
   public pipUrl: string;
+  public mainImageUrl: string;
+  public mainImageAlt: string;
 
   constructor(
     id: string,
     priceNumeral: number,
     name: string,
     typeName: number,
-    pipUrl: string
+    pipUrl: string,
+    mainImageUrl: string,
+    mainImageAlt: string
   ) {
     this.id = id;
     this.priceNumeral = priceNumeral;
     this.name = name;
     this.typeName = typeName;
     this.pipUrl = pipUrl;
+    this.mainImageUrl = mainImageUrl;
+    this.mainImageAlt = mainImageAlt;
   }
 }
