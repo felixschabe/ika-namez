@@ -26,7 +26,7 @@ indexNames().then((ikeaProducts: IkeaProduct[]) => {
 });
 
 async function indexNames(): Promise<IkeaProduct[]> {
-  const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+  const ALPHABET = "abcdefghijklmnopqrstuvwxyz1234567890";
 
   const IKEA_API_URL: URL = new URL(
     "https://sik.search.blue.cdtapps.com/de/de/search-result-page?max-num-filters=8&q=b&autocorrect=true&size=99999&columns=4&store=&subcategories-style=tree-navigation&types=PRODUCT%2CCONTENT%2CPLANNER%2CREFINED_SEARCHES%2CANSWER&c=sr&v=20211021"
@@ -34,7 +34,11 @@ async function indexNames(): Promise<IkeaProduct[]> {
 
   const ikeaProducts: IkeaProduct[] = [];
 
-  for (let alphabetNumber = 0; alphabetNumber < 26; alphabetNumber++) {
+  for (
+    let alphabetNumber = 0;
+    alphabetNumber < ALPHABET.length;
+    alphabetNumber++
+  ) {
     const letter: string = ALPHABET.charAt(alphabetNumber);
     const ikeaQuery: URL = IKEA_API_URL;
     ikeaQuery.searchParams.set("q", letter);
