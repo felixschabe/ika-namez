@@ -11,6 +11,12 @@ metadataItem{
     flex-basis: fit-content;
 }
 
+metadataItem[small]{
+    font-weight: var(--csGlobalTextFontThinner);
+    font-size: 0.5rem;
+}
+
+
 productPicture{
     height: 25rem;
     border: 1px solid grey;
