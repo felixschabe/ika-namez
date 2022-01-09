@@ -50,6 +50,8 @@ function innerMetadata(json) {
     metadata.innerHTML +
     `<metadataItem>LocalId: ${json.localId}</metadataItem>`;
   metadata.innerHTML =
+    metadata.innerHTML + `<metadataItem>Pos: ${json.pos}</metadataItem>`;
+  metadata.innerHTML =
     metadata.innerHTML + `<metadataItem>Name: ${json.name}</metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
