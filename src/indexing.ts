@@ -19,6 +19,13 @@ indexNames().then((ikeaProducts: IkeaProduct[]) => {
     "we`ve found " + uniqueIkeaProducts.length + " item(s) with unique names"
   );
 
+  uniqueIkeaProducts.forEach((value, index) => {
+    value.pos = index;
+    return value;
+  });
+
+  console.log("we`ve added pos");
+
   writeFileSync(
     "output/ikeaProducts.json",
     JSON.stringify(uniqueIkeaProducts, null, 2)
@@ -67,6 +74,7 @@ async function indexNames(): Promise<IkeaProduct[]> {
               new IkeaProduct(
                 id,
                 currentItemNumber,
+                -1,
                 priceNumeral,
                 name,
                 typeName,
@@ -86,6 +94,7 @@ async function indexNames(): Promise<IkeaProduct[]> {
 class IkeaProduct {
   public id: string;
   public localId: number;
+  public pos: number;
   public priceNumeral: number;
   public name: string;
   public typeName: number;
@@ -96,6 +105,7 @@ class IkeaProduct {
   constructor(
     id: string,
     localId: number,
+    pos: number,
     priceNumeral: number,
     name: string,
     typeName: number,
@@ -105,6 +115,7 @@ class IkeaProduct {
   ) {
     this.id = id;
     this.localId = localId;
+    this.pos = pos;
     this.priceNumeral = priceNumeral;
     this.name = name;
     this.typeName = typeName;
