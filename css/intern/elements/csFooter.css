@@ -1,0 +1,67 @@
+/* Attributes for button element*/
+.csFooter {
+    --csFooterSideSpace: var(--csGlobalSideSpace);
+    --csFooterColor: var(--csGlobalBlack);
+    --csFooterBackgroundColor: var(--csGlobalWhite);
+    --csFooterTextFontBig: var(--csGlobalTextFontBig);
+    --csFooterWhite: var(--csGlobalWhite);
+    --csFooterDarkGrey: var(--csGlobalDarkGrey);
+    --csFooterLightGrey: var(--csGlobalLightGrey);
+    --csFooterOrange: var(--csGlobalOrange);
+    --csFooterLinkHoverAnimationDuration: var(--csGlobalAnimationDuration);
+}
+
+/* Styling for footer element */
+.csFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem var(--csFooterSideSpace);
+    color: var(--csFooterLightGrey);
+    background-color: var(--csFooterBackgroundColor);
+    row-gap: 1rem;
+    border-top: 1px solid lightgray;
+
+}
+
+/* Styling for copyright within footer */
+.csCopyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Special Styling for copyright symbol within copyright row */
+.csCopyright csCopyrightSymbol {
+    margin-right: 0.5rem;
+}
+
+/* Row Styling for Links within footer */
+.csFooterLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Styling for each link column */
+.csFooterLinksColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    column-gap: 2rem;
+}
+
+/* Styling for each link */
+.csFooterLink {
+    color: var(--csFooterDarkGrey);
+    cursor: pointer;
+}
+
+/* Hover effect for each Link */
+.csFooterLink:hover {
+    color: var(--csFooterColor);
+    transition-duration: var(--csFooterLinkHoverAnimationDuration);
+}

@@ -1,0 +1,7 @@
+/* This file imports necessary files for its html part */
+@import "randomSection.css";
+
+body {
+    display: flex;
+    flex-direction: column;
+}

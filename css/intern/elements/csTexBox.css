@@ -1,0 +1,38 @@
+/* Attributes for TextBoxes */
+.csTextBox {
+    --csTextBoxTextNormal: var(--csGlobalTextNormal);
+    --csTextBoxTextSmall: var(--csGlobalTextSmall);
+    --csTextBoxBorderWidth: 0.1rem;
+    --csTextBoxHeight: 2rem;
+    --csTextBoxFontWeight: var(--csGlobalTextFontThinner);
+}
+
+/* Styling for TextBox */
+.csTextBox {
+    flex-grow: 0;
+    height: var(--csTextBoxHeight);
+    background-color: transparent;
+    border: var(--csTextBoxBorderWidth) solid var(--csGlobalLightGrey);
+    border-radius: 0px;
+    color: var(--csGlobalDarkGrey);
+    font-family: Montserrat, serif;
+    font-size: var(--csTextBoxTextNormal);
+    font-weight: var(--csTextBoxFontWeight);
+}
+
+/* Instructions for devices with smaller screens*/
+@media screen and (max-width: 53rem) {
+    .csTextBox {
+        font-size: var(--csTextBoxTextSmall) !important;
+    }
+}
+
+/* Styling for TextBox placeholder */
+.csTextBox::placeholder {
+    color: var(--csGlobalLightGrey);
+}
+
+/* Styling if the TextBox is in focus */
+.csTextBox:focus {
+    outline: none;
+}

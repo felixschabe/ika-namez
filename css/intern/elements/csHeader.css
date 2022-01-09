@@ -1,0 +1,19 @@
+.csHeader{
+    --csHeaderSideSpace: var(--csGlobalSideSpace);
+    --csHeaderFontWeightHighlight: var(--csGlobalTextFontThinner);
+    --csHeaderFontWeight: var(--csGlobalTextFontBig);
+    --csHeaderColorHighlight: var(--csGlobalOrange);
+}
+
+.csHeader{
+    padding: 1rem var(--csHeaderSideSpace);
+    font-weight: var(--csHeaderFontWeight);
+    cursor: pointer;
+    font-size: 2rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.csHeader highlight{
+    font-weight: var(--csHeaderFontWeightHighlight);
+    color: var(--csHeaderColorHighlight);
+}

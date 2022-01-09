@@ -1,0 +1,14 @@
+/* Attributes for textArea */
+.csUnderlineHeadline {
+    --csUnderlineHeadlineWidth: 4rem;
+    --csUnderlineHEadlineBorderWidth: 1px;
+}
+
+/* Styling for underline element */
+.csUnderlineHeadline {
+    width: var(--csUnderlineHeadlineWidth);
+    margin-left: 0;
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+    border: var(--csUnderlineHEadlineBorderWidth) inset var(--csGlobalWhite);
+}

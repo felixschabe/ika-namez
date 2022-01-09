@@ -1,0 +1,40 @@
+/* Place where global properties are defined */
+:root {
+    /* colors */
+    --csGlobalOrange: #3DC6BF;
+    --csGlobalBlack: #000000;
+    --csGlobalLightGrey: #7a7a7a;
+    --csGlobalDarkGrey: #606060;
+    --csGlobalWhite: #ffffff;
+
+    /*other elements*/
+    --csGlobalHeadlineBig: 6rem;
+    --csGlobalTextNormal: 1rem;
+    --csGlobalTextSmall: 0.75rem;
+    --csGlobalTextFontThinner: 300;
+    --csGlobalTextFontThin: 400;
+    --csGlobalTextFontBig: 600;
+
+    /* styling */
+    --csGlobalSideSpace: 2.5vw;
+
+    /* different global properties */
+    --csGlobalAnimationDuration: 0.3s;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat, serif;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+csMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+

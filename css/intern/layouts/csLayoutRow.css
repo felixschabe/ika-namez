@@ -1,0 +1,43 @@
+/* Attributes for csLayoutRow */
+.csLayoutRow {
+    --csLayoutRowSideSpace: var(--csGlobalSideSpace);
+    --csLayoutRowGap: 1rem;
+    --csLayoutBreakpoint: 53rem;
+}
+
+/* Styling for layout row */
+.csLayoutRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--csLayoutRowGap);
+}
+
+/* uses a different side gap between to columns */
+.csLayoutRow.sideWidthGap{
+    gap: var(--csLayoutRowSideSpace) !important;
+}
+
+/* Special Styling for a row with align left */
+.csLayoutRow[flex-start] {
+    justify-content: flex-start !important;
+}
+
+/* Styling for a column */
+.csLayoutRow .csLayoutColumn {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--csLayoutRowGap);
+}
+
+/* Special wrap point for rows with 2 columns */
+.csLayoutRow .csLayoutColumn.two {
+    flex-basis: calc(var(--csLayoutBreakpoint) / 2);
+}
+
+/* Special wrap point for rows with 4 columns */
+.csLayoutRow .csLayoutColumn.four {
+    flex-basis: calc(var(--csLayoutBreakpoint) / 4);
+}

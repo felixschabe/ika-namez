@@ -1,0 +1,46 @@
+/* Attributes for the headline */
+.csHeadline {
+    --csHeadlineTransitionDuration: var(--csGlobalAnimationDuration);
+    --csHeadlineOrange: var(--csGlobalOrange);
+    --csHeadlineUnderlineColor: var(--csGlobalLightGrey);
+    --csHeadlineMarginBottom: 1rem;
+    --csHeadlineNormal: 3rem;
+    --csHeadlineSmall: 2rem;
+}
+
+/* Styling of the Headline */
+.csHeadline {
+    color: var(--csHeadlineOrange);
+    font-size: var(--csHeadlineNormal);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: var(--csHeadlineMarginBottom);
+}
+
+/* styling for underline of Headline */
+.csHeadline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--csHeadlineUnderlineColor);
+    height: 1px;
+    width: 4rem;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-duration: var(--csHeadlineTransitionDuration);
+}
+
+/* hover effekt for underline of headline if not mobile (cursor checked)*/
+@media (pointer: fine) {
+    .csHeadline.hoverEffect:hover::after {
+        transform: scaleX(1.4);
+    }
+}
+
+/* Instructions for devices with smaller screens*/
+@media screen and (max-width: 53rem) {
+    .csHeadline {
+        font-size: var(--csHeadlineSmall);
+    }
+}

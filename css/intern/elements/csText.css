@@ -1,0 +1,17 @@
+/* Attributes for text */
+.csText {
+    --csTextNormal: var(--csGlobalTextNormal);
+    --csTextSmall: var(--csGlobalTextSmall);
+}
+
+/* Styling for Text */
+.csText {
+    font-size: var(--csTextNormal);
+}
+
+/* Instructions for devices with smaller screens*/
+@media screen and (max-width: 53rem) {
+    .csText {
+        font-size: var(--csTextSmall) !important;
+    }
+}

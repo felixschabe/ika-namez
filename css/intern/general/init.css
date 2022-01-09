@@ -1,0 +1,8 @@
+/* Importing Google Font Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+/* Importing Elements from elements directory*/
+@import "../elements/importElements.css";
+/* Import general Style elements/ properties*/
+@import "style.css";
+/*Import Layouts/ Elements*/
+@import "../layouts/importLayouts.css";

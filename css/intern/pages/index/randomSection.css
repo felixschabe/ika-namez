@@ -1,0 +1,34 @@
+metadata{
+    color: grey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+metadataItem{
+    color: grey;
+    flex-basis: fit-content;
+}
+
+productPicture{
+    height: 25rem;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+productPicture img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+productPicture div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+

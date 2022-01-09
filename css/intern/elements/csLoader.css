@@ -1,0 +1,40 @@
+.csLoader {
+    --csLoaderAnimationDuration: calc(var(--csGlobalAnimationDuration) * 1.5);
+    --csLoaderWhite: var(--csGlobalWhite);
+    --csLoaderLightGrey: var(--csGlobalLightGrey);
+
+    --csLoaderBorderWidth: 0.3125rem;
+    --csLoaderDimension: 5.9375rem;
+    --csLoaderColor: var(--csLoaderLightGrey);
+}
+
+.csLoader {
+    border: var(--csLoaderBorderWidth) solid var(--csLoaderColor);
+    border-radius: 50%;
+    border-top: var(--csLoaderBorderWidth) solid rgba(61, 61, 61, 0.0);
+    border-right: var(--csLoaderBorderWidth) solid rgba(61, 61, 61, 0.0);
+    border-bottom: var(--csLoaderBorderWidth) solid var(--csLoaderColor);
+    border-left: attr(borderWidth rem) solid rgba(61, 61, 61, 0.0);
+    width: var(--csLoaderDimension);
+    height: var(--csLoaderDimension);
+    -webkit-animation: spin var(--csLoaderAnimationDuration) ease-in-out infinite;
+    animation: spin var(--csLoaderAnimationDuration) ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

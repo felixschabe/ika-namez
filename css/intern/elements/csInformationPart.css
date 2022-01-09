@@ -1,0 +1,13 @@
+/* Attributes for the Information Part */
+.csInformationPart {
+    --csInformationPartSideSpace: calc(var(--csGlobalSideSpace) * 2);
+    --csInformationPartTopBottomSpace: 2rem;
+}
+
+/* Styling of the information Part */
+.csInformationPart {
+    margin: var(--csInformationPartTopBottomSpace) var(--csInformationPartSideSpace);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

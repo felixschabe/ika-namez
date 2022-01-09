@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ika-namez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/intern/general/init.css">
+    <link rel="stylesheet" href="css/intern/pages/index/index.css">
+    <link rel="stylesheet" href="css/intern/pages/imprint/imprint.css">
+    <link rel="stylesheet" href="css/intern/pages/privacy/privacy.css">
+    <script type="text/javascript" src="js/extern/jquery.js"></script>
+    <script type="text/javascript" src="js/intern/general/functions.js"></script>
+    <script type="text/javascript" src="js/intern/general/variables.js"></script>
+    <dynamicallyloadedscripts></dynamicallyloadedscripts>
+</head>
+<body>
+
+<csMain>
+    <div class="csHeader" onclick="window.location.href = '/';">
+        ika<highlight>-namez</highlight>
+    </div>
+    <csContent>
+    </csContent>
+    <div class="csFooter">
+        <div class="csFooterLinks">
+            <div class="csFooterLinksColumn">
+                <div class="csFooterLink" onclick="window.location.href = 'https://github.com/felixschabe/ika-namez';">
+                    Github
+                </div>
+            </div>
+            <div class="csFooterLinksColumn">
+                <div class="csFooterLink" onclick="navigate('privacy')">
+                    Privacy
+                </div>
+            </div>
+            <div class="csFooterLinksColumn">
+                <div class="csFooterLink" onclick="navigate('imprint')">
+                    Imprint
+                </div>
+            </div>
+            <div class="csFooterLinksColumn">
+                <div class="csFooterLink"
+                     onclick="window.location.href = 'mailto:' + contactDepartment + contactSpacer + contactDomain">
+                    Mail
+                </div>
+            </div>
+        </div>
+    </div>
+</csMain>
+<script type="text/javascript" src="js/intern/general/director.js"></script>
+<script type="text/javascript">
+    navigate('index', true);
+</script>
+<script src="js/extern/feather.min.js"></script>
+</body>
+</html>

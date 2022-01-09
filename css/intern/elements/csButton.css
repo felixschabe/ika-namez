@@ -1,0 +1,74 @@
+/* Attributes for button element*/
+.csButton {
+    --csButtonBorderWidth: 0.1rem;
+    --csButtonWidth: 8rem;
+    --csButtonHeight: 2rem;
+    --csButtonTransitionDuration: 0.3s;
+    --csButtonMaxWidthProperty: 100%;
+
+    --csButtonWhite: var(--csGlobalWhite);
+    --csButtonOrange: var(--csGlobalOrange);
+    --csButtonLightGrey: var(--csGlobalLightGrey);
+    --csButtonGrey: var(--csGlobalDarkGrey);
+}
+
+/* Special attributes for buttons  maximal width is necessary*/
+.csButton[max-width] {
+    flex-basis: var(--csButtonMaxWidthProperty);
+}
+
+/* Styling for Button*/
+.csButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    height: var(--csButtonHeight);
+    flex-basis: var(--csButtonWidth);
+    color: var(--csButtonWhite);
+    background-color: var(--csButtonOrange);
+    border: var(--csButtonBorderWidth) solid var(--csButtonOrange);
+    cursor: pointer;
+}
+
+/* Active filter for Button */
+.csButton:active {
+    filter: brightness(0.5);
+}
+
+/* Active filter for Button */
+.csButton:disabled {
+    color: var(--csButtonWhite);
+    background-color: var(--csButtonGrey);
+}
+
+/* Special Design for outlined Buttons*/
+.csButton.outline {
+    background-color: transparent;
+    color: var(--csGlobalOrange);
+}
+
+/* style if someone click a button with a background request */
+.csButton.requesting{
+    background-color: var(--csButtonLightGrey) !important;
+    color: var(--csButtonWhite) !important;
+    border: var(--csButtonBorderWidth) solid var(--csButtonGrey) !important;
+    cursor: wait;
+}
+
+/*Hover effect for normal and outlined buttons wrapped in Media due to screen issue*/
+@media (pointer: fine) {
+    .csButton:hover {
+        color: var(--csGlobalOrange);
+        background-color: transparent;
+        transition-duration: var(--csButtonTransitionDuration);
+
+    }
+
+    .csButton.outline:hover {
+        color: var(--csGlobalWhite);
+        background-color: var(--csGlobalOrange);
+        transition-duration: var(--csButtonTransitionDuration);
+    }
+}

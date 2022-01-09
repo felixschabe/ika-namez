@@ -1,0 +1,13 @@
+/* Attributes for Spacer */
+.csSpacer {
+    --csSpacerWhite: var(--csGlobalWhite);
+    --csSpacerBorderWidth: 1px;
+    --csSpacerWidth: calc(100% - 2 * var(--csSpacerBorderWidth))
+
+}
+
+/* Styling for Spacer */
+.csSpacer {
+    width: var(--csSpacerWidth);
+    border: var(--csSpacerBorderWidth) inset var(--csSpacerWhite);
+}
