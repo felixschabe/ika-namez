@@ -8,7 +8,7 @@ Branches:
 |Branch    |Description         |
 |----------|--------------------|
 |api       |getting ikea names  |
-|index     |indexing process    |
+|indexing  |indexing process    |
 |ui        |userinterface       |
 
 # INFO 
