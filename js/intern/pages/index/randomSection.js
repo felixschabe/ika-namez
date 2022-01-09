@@ -47,6 +47,9 @@ function innerMetadata(json) {
   metadata.innerHTML =
     metadata.innerHTML + `<metadataItem>Id: ${json.id}</metadataItem>`;
   metadata.innerHTML =
+    metadata.innerHTML +
+    `<metadataItem>LocalId: ${json.localId}</metadataItem>`;
+  metadata.innerHTML =
     metadata.innerHTML + `<metadataItem>Name: ${json.name}</metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
