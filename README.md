@@ -1,4 +1,4 @@
-# IKEA-MOEBEL-NAME
+# IKEA-NAMES
 ***
 This helps you!  
 Basically it lists some names of ikea products.
