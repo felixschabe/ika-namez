@@ -61,13 +61,16 @@ function innerMetadata(json) {
     `<metadataItem>Description: ${json.mainImageAlt}</metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
-    `<metadataItem>Price*: ${json.priceNumeral} EUR</metadataItem>`;
+    `<metadataItem>Price: ${json.priceNumeral} EUR</metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
     `<metadataItem>Shop: <a target="_blank" href="${json.pipUrl}">buy</a></metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
     `<metadataItem small>*We take no responsibility for the topicality, correctness and completeness of the information.</metadataItem>`;
+  metadata.innerHTML =
+    metadata.innerHTML +
+    `<metadataItem small>Number ${json.apiData.random} out of ${json.apiData.results} item(s) was selected</metadataItem>`;
 }
 
 function showLoader() {
