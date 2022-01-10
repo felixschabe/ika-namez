@@ -23,7 +23,8 @@ export class ProductController {
     }
 
     const random: number = await getRandom(productsJson.length - 1);
-    console.log(random);
+    productsJson[random].random = random;
+    productsJson[random].results = productsJson.length;
 
     res.json(productsJson[random]).status(200);
   }
