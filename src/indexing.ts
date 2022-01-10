@@ -10,7 +10,7 @@ indexNames().then((ikeaProducts: IkeaProduct[]) => {
 
   const uniqueIkeaProducts = ikeaProducts.filter((ikeaProduct: IkeaProduct) => {
     const firstIkeaProduct = ikeaProducts.find((element: IkeaProduct) => {
-      return ikeaProduct.name === element.name;
+      return ikeaProduct.name.startsWith(element.name);
     });
     return ikeaProduct === firstIkeaProduct;
   });
@@ -33,7 +33,8 @@ indexNames().then((ikeaProducts: IkeaProduct[]) => {
 });
 
 async function indexNames(): Promise<IkeaProduct[]> {
-  const ALPHABET = "abcdefghijklmnopqrstuvwxyz1234567890";
+  let searchStrings =
+    "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0,tisch,lampe,ikea,raum,stuhl,deko,bett,sofa,angebote,produkte";
 
   const IKEA_API_URL: URL = new URL(
     "https://sik.search.blue.cdtapps.com/de/de/search-result-page?max-num-filters=8&q=b&autocorrect=true&size=99999&columns=4&store=&subcategories-style=tree-navigation&types=PRODUCT%2CCONTENT%2CPLANNER%2CREFINED_SEARCHES%2CANSWER&c=sr&v=20211021"
@@ -41,12 +42,14 @@ async function indexNames(): Promise<IkeaProduct[]> {
 
   const ikeaProducts: IkeaProduct[] = [];
 
+  let searchStringsArray = searchStrings.split(",");
+
   for (
-    let alphabetNumber = 0;
-    alphabetNumber < ALPHABET.length;
-    alphabetNumber++
+    let searchStringPosition = 0;
+    searchStringPosition < searchStringsArray.length;
+    searchStringPosition++
   ) {
-    const letter: string = ALPHABET.charAt(alphabetNumber);
+    const letter: string = searchStringsArray[searchStringPosition];
     const ikeaQuery: URL = IKEA_API_URL;
     ikeaQuery.searchParams.set("q", letter);
     console.log("Fetching: " + ikeaQuery.href);
