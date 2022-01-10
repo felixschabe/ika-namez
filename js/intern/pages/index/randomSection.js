@@ -67,10 +67,10 @@ function innerMetadata(json) {
     `<metadataItem>Shop: <a target="_blank" href="${json.pipUrl}">buy</a></metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
-    `<metadataItem small>*We take no responsibility for the topicality, correctness and completeness of the information.</metadataItem>`;
+    `<metadataItem small>Number ${json.apiData.random} out of ${json.apiData.results} item(s) was selected</metadataItem>`;
   metadata.innerHTML =
     metadata.innerHTML +
-    `<metadataItem small>Number ${json.apiData.random} out of ${json.apiData.results} item(s) was selected</metadataItem>`;
+    `<metadataItem small>*We take no responsibility for the topicality, correctness and completeness of the information.</metadataItem>`;
 }
 
 function showLoader() {
