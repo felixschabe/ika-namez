@@ -1,1 +1,1 @@
-var csApiEndpoint = "http://pol-waw.felixens.eu:3000";
+var csApiEndpoint = "https://api.ika-namez.com";
