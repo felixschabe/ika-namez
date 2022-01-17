@@ -36,7 +36,6 @@ function direct(page) {
     dynamicallyLoadScript(page, function () {
       window.dispatchEvent(directorFinishedEvent);
     });
-    feather.replace();
   });
 }
 
