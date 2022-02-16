@@ -10,7 +10,7 @@ export function registerMiddleware(router: express.Application): void {
   router.use(helmet());
   router.use(cors({origin: process.env.API_ALLOWED_HOST}));
 
-  const rateLimitResponse = {error: true, message: 'rate limite reached'};
+  const rateLimitResponse = {error: true, message: 'rate limit reached'};
   const rateLimit = RateLimit({
     windowMs: 5 * 60 * 100,
     max: 20,
