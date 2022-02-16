@@ -18,7 +18,7 @@ export function registerMiddleware(router: express.Application): void {
   });
   router.use(errorHandler);
   router.use(rateLimit);
-  router.use(morgan('short')); // Logging
+  router.use(morgan('combined')); // Logging
   router.use(express.json()); // This is for eg the body parser to use json
   router.use(errorHandler);
   router.set('json spaces', 2); // This is for pretty_print
