@@ -13,7 +13,7 @@ export function registerMiddleware(router: express.Application): void {
   const rateLimitResponse = {error: true, message: 'rate limite reached'};
   const rateLimit = RateLimit({
     windowMs: 5 * 60 * 100,
-    max: 10,
+    max: 20,
     message: JSON.stringify(rateLimitResponse),
   });
   router.use(errorHandler);
