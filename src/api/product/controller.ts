@@ -1,8 +1,8 @@
-import { ProductRepository } from "./repository";
-import { bind } from "decko";
-import { Request, Response } from "express";
-import { getRandom } from "../../services/random";
-import { createDefaultApiResponse } from "../../utils/utils";
+import {ProductRepository} from './repository';
+import {bind} from 'decko';
+import {Request, Response} from 'express';
+import {getRandom} from '../../services/random';
+import {createDefaultApiResponse} from '../../utils/utils';
 
 export class ProductController {
   readonly repo: ProductRepository = new ProductRepository();
@@ -14,12 +14,12 @@ export class ProductController {
 
     if (startsWith) {
       productsJson = productsJson.filter((product: any) =>
-        product.name.toUpperCase().startsWith((startsWith + "").toUpperCase())
+        product.name.toUpperCase().startsWith((startsWith + '').toUpperCase())
       );
     }
 
     if (productsJson.length <= 0) {
-      return createDefaultApiResponse(res, true, "nothing found", 404);
+      return createDefaultApiResponse(res, true, 'nothing found', 404);
     }
 
     const random: number = await getRandom(productsJson.length - 1);

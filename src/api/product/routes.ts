@@ -1,9 +1,9 @@
-import { IComponentRoutes } from "../../types/common";
-import { Router } from "express";
-import { ProductController } from "./controller";
-import Joi from "joi";
-import validator, { ExpressJoiInstance } from "express-joi-validation";
-import errorHandler from "../../middlewares/errorHandler";
+import {IComponentRoutes} from '../../types/common';
+import {Router} from 'express';
+import {ProductController} from './controller';
+import Joi from 'joi';
+import validator, {ExpressJoiInstance} from 'express-joi-validation';
+import errorHandler from '../../middlewares/errorHandler';
 
 export class ProductRoutes implements IComponentRoutes<ProductController> {
   readonly controller: ProductController = new ProductController();
@@ -12,7 +12,7 @@ export class ProductRoutes implements IComponentRoutes<ProductController> {
     passError: true,
   });
 
-  readonly getProductRoute: string = "/";
+  readonly getProductRoute: string = '/';
 
   constructor() {
     this.initRoutes();

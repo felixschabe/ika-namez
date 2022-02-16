@@ -7,7 +7,14 @@
   "license": "MIT",
   "private": null,
   "scripts": {
-    "dev": "nodemon ./src/index.ts"
+    "dev": "nodemon ./src/index.ts",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -16,7 +23,9 @@
     "@types/node-fetch": "^2.5.12",
     "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "gts": "^3.1.0",
+    "@types/node": "^14.11.2"
   },
   "dependencies": {
     "cors": "^2.8.5",

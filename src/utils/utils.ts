@@ -1,4 +1,4 @@
-import { Response } from "express";
+import {Response} from 'express';
 
 export function createDefaultApiResponse(
   res: Response,
@@ -6,7 +6,7 @@ export function createDefaultApiResponse(
   message: string,
   status: number
 ): void {
-  res.status(status).json({ message, error, status });
+  res.status(status).json({message, error, status});
   if (error) {
     return;
   }

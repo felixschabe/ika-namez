@@ -1,6 +1,6 @@
-import { IComponentRoutes } from "../../types/common";
-import { NotFoundController } from "./controller";
-import { Router } from "express";
+import {IComponentRoutes} from '../../types/common';
+import {NotFoundController} from './controller';
+import {Router} from 'express';
 
 export class NotFoundRoutes implements IComponentRoutes<NotFoundController> {
   readonly controller: NotFoundController = new NotFoundController();
@@ -11,6 +11,6 @@ export class NotFoundRoutes implements IComponentRoutes<NotFoundController> {
   }
 
   initRoutes(): void {
-    this.router.all("*", this.controller.getNotFoundMessage);
+    this.router.all('*', this.controller.getNotFoundMessage);
   }
 }

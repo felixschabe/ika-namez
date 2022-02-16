@@ -1,19 +1,19 @@
 export function checkEnv() {
-  require("dotenv").config();
+  require('dotenv').config();
 
-  const envVarNames = ["API_PORT", "API_ALLOWED_HOST"];
+  const envVarNames = ['API_PORT', 'API_ALLOWED_HOST'];
 
-  let missingVars = "";
+  let missingVars = '';
 
-  envVarNames.forEach((envVarName) => {
+  envVarNames.forEach(envVarName => {
     if (!process.env[envVarName]) {
-      missingVars += envVarName + "\n";
+      missingVars += envVarName + '\n';
     }
   });
 
   if (missingVars.length > 0) {
-    throw new Error("Missing environment variables:\n" + missingVars);
+    throw new Error('Missing environment variables:\n' + missingVars);
   } else {
-    console.log("Environment variables check successful.");
+    console.log('Environment variables check successful.');
   }
 }
