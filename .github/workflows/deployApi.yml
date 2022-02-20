@@ -47,6 +47,11 @@ jobs:
           envkey_API_PORT: ${{ secrets.API_PORT }}
           envkey_API_ALLOWED_HOST: ${{ secrets.API_ALLOWED_HOST }}
 
+      - name: save-existing-products
+        run: |
+          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SHARED_PARTY_SERVER_SSH_HOST }} 'mkdir -p tmp && cp -r ika-namez/output tmp/'
+
+
       - name: stop-pm2-service
         continue-on-error: true
         run: |
@@ -59,6 +64,11 @@ jobs:
 
       - name: deploy-with-rsync
         run: rsync -avz ./ ubuntu@${{ secrets.SSH_HOST }}:/home/ubuntu/ika-namez/
+
+      - name: restore-products
+        run: |
+          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SHARED_PARTY_SERVER_SSH_HOST }} 'mkdir -p ika-namez/output && cp -r tmp/ ika-namez/output'
+
 
       - name: start-pm2-service
         continue-on-error: true
