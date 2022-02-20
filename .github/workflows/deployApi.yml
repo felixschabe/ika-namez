@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-to-shared-party:
+  deploy-to-ika-namez:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,6 +37,7 @@ jobs:
 
       - name: change-compiled-to-javascript
         run: |
+          ls
           rm -r ./src
           cp -r ./build/src ./src
 
