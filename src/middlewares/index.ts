@@ -6,7 +6,7 @@ import errorHandler from './errorHandler';
 import morgan from 'morgan';
 
 export function registerMiddleware(router: express.Application): void {
-  router.set('trust proxy', 1);
+  router.set('trust proxy', 2);
   router.use(helmet());
   router.use(cors({origin: process.env.API_ALLOWED_HOST}));
 
