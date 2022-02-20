@@ -49,7 +49,7 @@ jobs:
 
       - name: save-existing-products
         run: |
-          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SSH_HOST }} 'mkdir -p tmp && cp -r ika-namez/output tmp/'
+          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SSH_HOST }} 'mkdir -p tmp && cp ika-namez/output/ikeaProducts.json tmp/'
 
 
       - name: stop-pm2-service
@@ -67,7 +67,7 @@ jobs:
 
       - name: restore-products
         run: |
-          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SSH_HOST }} 'mkdir -p ika-namez/output && cp -r tmp/ ika-namez/output'
+          ssh  -i /home/runner/.ssh/id_rsa ubuntu@${{ secrets.SSH_HOST }} 'mkdir -p ika-namez/output && cp  tmp/ikeaProducts.json ika-namez/output'
 
 
       - name: start-pm2-service
