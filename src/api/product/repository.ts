@@ -5,7 +5,7 @@ export class ProductRepository {
   @bind
   async getProducts(): Promise<any> {
     const productsJson: any = JSON.parse(
-      await readFileSync('output/ikeaProducts.json', {
+      await readFileSync(__dirname + '/../../../output/ikeaProducts.json', {
         encoding: 'utf8',
         flag: 'r',
       })
