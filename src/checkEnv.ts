@@ -1,6 +1,4 @@
 export function checkEnv() {
-  require('dotenv').config();
-
   const envVarNames = ['API_PORT', 'API_ALLOWED_HOST'];
 
   let missingVars = '';

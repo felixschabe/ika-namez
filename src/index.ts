@@ -4,6 +4,8 @@ import {checkEnv} from './checkEnv';
 import {registerMiddleware} from './middlewares';
 import {registerRoutes} from './api/registerRoutes';
 
+require('dotenv').config({path: __dirname + '/./../../.env'});
+
 checkEnv();
 
 try {
